@@ -1,0 +1,89 @@
+b)clear all;
+close all;
+clc;
+img=imshow('index.jpeg');
+
+c)clear all;
+close all;
+clc;
+pkg load image
+img=imread('index.jpeg');
+subplot(1,2,1)
+imshow(img);
+title('original image')
+
+d)resized_img=imresize(img,0.1);
+subplot(1,2,2)
+imshow(resized_img);
+title('resized img')
+
+e)clear all;
+close all;
+clc;
+pkg load image
+img=imread('index.jpeg');
+grayscale_img=rgb2gray(img);
+imshow(grayscale_img)
+title('grayscale')
+	
+f)clear all;
+close all;
+clc;
+pkg load image
+img = imread('index.jpeg');
+bw_img=im2bw(img);
+imshow(bw_img)
+title('black and white')
+
+g)clear all;
+close all;
+clc;
+pkg load image;
+img = imread('index.jpeg');
+red_img=img(:,:,1);
+green_img=img(:,:,2);
+blue_img=img(:,:,3);
+
+
+h)clear all;
+close all;
+clc;
+pkg load image;
+img = imread('index.jpeg');
+temp_img=img;
+
+subplot(2,2,1);
+imshow(img);
+title('original img');
+
+#red image
+img(:,:,2)=0;
+img(:,:,3)=0;
+subplot(2,2,2);
+imshow(img);
+title('red img');
+
+#green image
+img=temp_img;
+img(:,:,1)=0;
+img(:,:,3)=0;
+subplot(2,2,3);
+imshow(img);
+title('green img');
+
+#blue image
+img=temp_img;
+img(:,:,1)=0;
+img(:,:,2)=0;
+subplot(2,2,4);
+imshow(img);
+title('blue img');
+
+i)clear all;
+close all;
+clc;
+pkg load image;
+m=[0:9];
+n=reshape(m,2,5);
+imshow(n,[]);
+
